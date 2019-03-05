@@ -18,7 +18,7 @@
 </style>
 <script>
 export default {
-    data(){
+    data(){ 
         return {
             loading: false,
             title:'',
