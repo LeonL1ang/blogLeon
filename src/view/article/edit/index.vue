@@ -60,7 +60,20 @@ export default {
                this.$Message.error('请输入内容')
                return
             }            
+            // 按钮进入loading
             this.loading = true
+            this.$http({
+                url: '/article/save',
+                data:{
+                    title: subtitle,
+                    content: article
+                }
+            }).then( res => {      
+                // 取消按钮loading          
+                this.loading = false
+            }).catch(err => {                
+               this.$Message.error(err + '')
+            })
         },
           // 绑定@imgAdd event
         $imgAdd(pos, $file){
