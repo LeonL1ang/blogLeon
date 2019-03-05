@@ -50,6 +50,16 @@ export default {
     },
     methods: {
         toLoading (){
+            let subtitle = this.title.trim()
+            if(subtitle === ''){
+               this.$Message.error('请输入标题')
+               return
+            }
+            let article = this.context.trim()
+            if(article === ''){                
+               this.$Message.error('请输入内容')
+               return
+            }            
             this.loading = true
         },
           // 绑定@imgAdd event
