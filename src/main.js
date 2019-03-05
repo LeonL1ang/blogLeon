@@ -7,6 +7,8 @@ import iView from 'iview';
 import 'iview/dist/styles/iview.css';
 import Vuex from 'vuex'
 import Axios from 'axios'
+import mavonEditor from 'mavon-editor'
+import 'mavon-editor/dist/css/index.css'
 
 const requestUrl = 'http://localhost:9011'
 
@@ -14,6 +16,7 @@ Vue.config.productionTip = false
 Vue.prototype.$http = Axios
 Vue.use(Vuex)
 Vue.use(iView)
+Vue.use(mavonEditor)
 
 const ADD_COUNT = 'ADD_COUNT' // 用常量代替事件类型，使得代码更清晰
 const REMOVE_COUNT = 'REMOVE_COUNT'
